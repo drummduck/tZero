@@ -72,6 +72,8 @@ class tZero : AppCompatActivity(), RestaurantViewHolder.OnItemSelectedListener, 
      * On success it sets the adapter for the RecyclerView
      */
     fun searchArea(){
+        restaurants.clear()
+
         Log.i("tZero", "searchBarText: " + searchBar.text)
         var list : List<String> = searchBar.text.split(",\\s+".toRegex())
         try {
